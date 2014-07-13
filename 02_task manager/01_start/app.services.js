@@ -9,6 +9,7 @@
         .config(Configuration)
         .service('TodoListData',TodoListData);
 
+    // todo: this service not contain any logic at all!
     function TodoListData()
     {
         var list;

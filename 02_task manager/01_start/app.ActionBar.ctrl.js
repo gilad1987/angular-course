@@ -7,6 +7,7 @@
     function ActionBar($rootScope){
 
         this.clearLog = function(){
+            // todo: don`t use the rootScope.
            $rootScope.$broadcast('Log:clear');
         }
     }
