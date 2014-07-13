@@ -4,7 +4,8 @@
 
 (function(angular){
 
-    function ActionBar($rootScope){
+    function ActionBar($rootScope)
+    {
 
         this.clearLog = function(){
            $rootScope.$broadcast('Log:clear');

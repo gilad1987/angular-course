@@ -11,7 +11,6 @@
         this.search.q = '';
 
         this.task = {};
-        this.task.done = false;
 
         this.indexUpdate = null;
 

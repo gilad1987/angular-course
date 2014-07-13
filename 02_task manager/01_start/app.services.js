@@ -7,7 +7,7 @@
     angular.module('app.services',[])
 
         .config(Configuration)
-        .service('TodoListData',TodoListData);
+        .service('TodoListData',[TodoListData]);
 
     function TodoListData()
     {
