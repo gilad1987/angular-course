@@ -3,7 +3,7 @@
  */
 (function(angular){
 
-
+    // todo: is this the parent controller? maybe you like to spread this to several controllers
     function TodoListCtrl(TodoListData,$scope){
         this.tasks = TodoListData;
 
@@ -11,6 +11,8 @@
         this.search.q = '';
 
         this.task = {};
+
+        // todo: task.done should be a part of task
         this.task.done = false;
 
         this.indexUpdate = null;
@@ -27,7 +29,7 @@
             }
 
             this.task = {};
-        }
+        };
 
         this.edit = function(index){
             if(typeof TodoListData[index] != 'undefined'){
@@ -41,7 +43,7 @@
                 this.task = task;
                 this.indexUpdate = index;
             }
-        }
+        };
 
         this.remove = function(index){
             if(typeof TodoListData[index] != 'undefined'){
