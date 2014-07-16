@@ -13,7 +13,10 @@
 
     }
 
-    angular.module('log',[])
+    angular.module('taskManager',[
+            'ngAnimate',
+            'log'
+        ])
         .config(Configuration)
         .run(OnRun);
 
