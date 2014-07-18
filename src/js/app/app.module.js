@@ -3,21 +3,21 @@
  */
 (function (window,angular) {
 
-    function Configuration()
+    function Configuration($log)
     {
 
     }
 
-    function OnRun()
+    function OnRun($log)
     {
-
+        $log.debug('OnRun app');
     }
 
     angular.module('taskManager',[
             'ngAnimate',
             'log'
         ])
-        .config(Configuration)
-        .run(OnRun);
+        .config([Configuration])
+        .run(['$log',OnRun]);
 
 })(window,angular);
