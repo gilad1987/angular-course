@@ -5,10 +5,27 @@
 (function () {
 
     function Tasks(){
-        console.log('Tasks config');
 
         function Get($log){
-            $log.debug('Tasks construct');
+
+            this.tasks = [];
+
+            this.add = function(task){
+                this.tasks.push(task);
+            }
+
+            this.edit = function(task){
+                this.tasks[this.tasks.indexOf(task)] = task;
+            }
+
+            this.remove = function(index){
+                this.tasks.splice(index,1);
+            }
+
+            this.get = function(key){
+                return this.tasks[key];
+            }
+            return this;
 
         }
 
