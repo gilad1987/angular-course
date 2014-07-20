@@ -7,7 +7,6 @@
 
 
         $scope.$on(EVENTS.TaskAction,function(EVENTS,type){
-
             $scope.$broadcast(EVENTS[type]);
         });
 

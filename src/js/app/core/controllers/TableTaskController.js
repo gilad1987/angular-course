@@ -21,7 +21,7 @@
 
         this.add = function(task){
 
-            if( this.tasks.indexOf(task)){
+            if( this.tasks.indexOf(task) === -1){
                 Tasks.add(task);
                 $scope.$emit(EVENTS.TaskAction,EVENTS.TaskAdd);
             }else{
