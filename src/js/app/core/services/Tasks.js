@@ -29,7 +29,7 @@
 
         }
 
-        this.$get = ['$log'];
+        this.$get = ['$log',Get];
 
     }
 
