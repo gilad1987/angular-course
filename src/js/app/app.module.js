@@ -3,9 +3,9 @@
  */
 (function (window,angular) {
 
-    function Configuration($log)
+    function Configuration(TasksProvider)
     {
-
+console.log(TasksProvider)
     }
 
     function OnRun($log)
@@ -26,7 +26,7 @@
             'ngAnimate',
             'log'
         ])
-        .config([Configuration])
+        .config(['TasksProvider',Configuration])
         .constant('EVENTS',events)
         .run(['$log',OnRun]);
 
