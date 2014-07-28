@@ -6,14 +6,34 @@
 
     function Tasks()
     {
+        var tasks = [];
+        var log = false;
+
+        this.setLogger = function(bol){
+            log = bol;
+        }
+
         this.$get = function(){
+
             return {
 
+                add:function(task){
+
+                    if(log){
+                        console.log('add');
+                    }
+
+                    tasks.push(task);
+                },
+
+                getTasks:function (){
+                    return tasks;
+                }
             }
         }
     }
 
-    angular.module('taskManager').provider('Tasks',[Tasks]);
+    angular.module('services').provider('Tasks',Tasks);
 })();
 
 

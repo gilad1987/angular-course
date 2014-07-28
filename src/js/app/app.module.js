@@ -5,7 +5,7 @@
 
     function Configuration(TasksProvider)
     {
-console.log(TasksProvider)
+        TasksProvider.setLogger(false);
     }
 
     function OnRun($log)
@@ -24,6 +24,7 @@ console.log(TasksProvider)
 
     angular.module('taskManager',[
             'ngAnimate',
+            'services',
             'log'
         ])
         .config(['TasksProvider',Configuration])

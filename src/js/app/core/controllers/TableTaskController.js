@@ -6,7 +6,7 @@
 
     function TableTaskController(Tasks,EVENTS,$scope,$log){
 
-        this.tasks = Tasks.tasks;
+        this.tasks = Tasks.getTasks();
 
         this.currentTask = {};
 
